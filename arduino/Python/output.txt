@@ -1,0 +1,612 @@
+Shot Count: 1
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 2
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 3
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 4
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 5
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 5
+Success Count: 0
+Accuracy: 0.10
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.30
+
+Shot Count: 5
+Success Count: 2
+Accuracy: 0.40
+
+Shot Count: 5
+Success Count: 2
+Accuracy: 0.40
+
+Shot Count: 5
+Success Count: 2
+Accuracy: 0.40
+
+Shot Count: 5
+Success Count: 2
+Accuracy: 0.40
+
+Shot Count: 5
+Success Count: 2
+Accuracy: 0.40
+
+Shot Count: 5
+Success Count: 2
+Accuracy: 0.50
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 5
+Success Count: 3
+Accuracy: 0.60
+
+Shot Count: 1
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 2
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 3
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 4
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 5
+Success Count: 0
+Accuracy: 0.00
+
+Shot Count: 5
+Success Count: 0
+Accuracy: 0.10
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.20
+
+Shot Count: 5
+Success Count: 1
+Accuracy: 0.30
+
+Shot Count: 5
+Success Count: 2
+Accuracy: 0.40
+

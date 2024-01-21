@@ -10,7 +10,7 @@ import {
   bundleResourceIO,
   cameraWithTensors,
 } from '@tensorflow/tfjs-react-native';
-import Svg, { Circle } from 'react-native-svg';
+import { Svg, Circle, Line } from 'react-native-svg';
 import { ExpoWebGLRenderingContext } from 'expo-gl';
 import { CameraType } from 'expo-camera/build/Camera.types';
 
@@ -160,7 +160,7 @@ export default function App() {
 
   const renderPose = () => {
     if (poses != null && poses.length > 0) {
-      const keypoints = poses[0].keypoints
+      const keypointts = poses[0].keypoints
         .filter((k) => (k.score ?? 0) > MIN_KEYPOINT_SCORE)
         .map((k) => {
           // Flip horizontally on android or when using back camera on iOS.
@@ -173,6 +173,10 @@ export default function App() {
           const cy =
             (y / getOutputTensorHeight()) *
             (isPortrait() ? CAM_PREVIEW_HEIGHT : CAM_PREVIEW_WIDTH);
+            const excludedKeypoints = ['left_eye', 'right_eye', 'left_ear', 'right_ear', 'nose'];
+          if (excludedKeypoints.includes(k.name ?? '')) {
+              return null;
+            }
           return (
             <Circle
               key={`skeletonkp_${k.name}`}
@@ -186,16 +190,248 @@ export default function App() {
           );
         });
 
-      return <Svg style={styles.svg}>{keypoints}</Svg>;
+      // Draw line segments
+      const keypoints = poses[0].keypoints;
+      const lineSegments = [];
+      const rightShoulder = keypoints.find((k) => k.name === 'right_shoulder');
+      const rightElbow = keypoints.find((k) => k.name === 'right_elbow');
+      const rightWrist = keypoints.find((k) => k.name === 'right_wrist');
+      const rightHip = keypoints.find((k) => k.name === 'right_hip');
+      const rightKnee = keypoints.find((k) => k.name === 'right_knee');
+      const rightAnkle = keypoints.find((k) => k.name === 'right_ankle');
+
+      const leftShoulder = keypoints.find((k) => k.name === 'left_shoulder');
+      const leftElbow = keypoints.find((k) => k.name === 'left_elbow');
+      const leftWrist = keypoints.find((k) => k.name === 'left_wrist');
+      const leftHip = keypoints.find((k) => k.name === 'left_hip');
+      const leftKnee = keypoints.find((k) => k.name === 'left_knee');
+      const leftAnkle = keypoints.find((k) => k.name === 'left_ankle');
+
+      if (rightShoulder && rightElbow) {
+        lineSegments.push(
+          <Line
+            key="rshoulderToElbow"
+            x1={rightShoulder.x}
+            y1={rightShoulder.y}
+            x2={rightElbow.x}
+            y2={rightElbow.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+
+      if (rightElbow && rightWrist) {
+        lineSegments.push(
+          <Line
+            key="relbowToWrist"
+            x1={rightElbow.x}
+            y1={rightElbow.y}
+            x2={rightWrist.x}
+            y2={rightWrist.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+
+      if (rightHip && rightKnee) {
+        lineSegments.push(
+          <Line
+            key="rhipToKnee"
+            x1={rightHip.x}
+            y1={rightHip.y}
+            x2={rightKnee.x}
+            y2={rightKnee.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+
+      if (rightKnee && rightAnkle) {
+        lineSegments.push(
+          <Line
+            key="rkneeToAnkle"
+            x1={rightKnee.x}
+            y1={rightKnee.y}
+            x2={rightAnkle.x}
+            y2={rightAnkle.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+
+      if (leftShoulder && leftElbow) {
+        lineSegments.push(
+          <Line
+            key="shoulderToElbow"
+            x1={leftShoulder.x}
+            y1={leftShoulder.y}
+            x2={leftElbow.x}
+            y2={leftElbow.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+
+      if (leftElbow && leftWrist) {
+        lineSegments.push(
+          <Line
+            key="elbowToWrist"
+            x1={leftElbow.x}
+            y1={leftElbow.y}
+            x2={leftWrist.x}
+            y2={leftWrist.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+
+      if (leftHip && leftKnee) {
+        lineSegments.push(
+          <Line
+            key="hipToKnee"
+            x1={leftHip.x}
+            y1={leftHip.y}
+            x2={leftKnee.x}
+            y2={leftKnee.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+
+      if (leftKnee && leftAnkle) {
+        lineSegments.push(
+          <Line
+            key="kneeToAnkle"
+            x1={leftKnee.x}
+            y1={leftKnee.y}
+            x2={leftAnkle.x}
+            y2={leftAnkle.y}
+            stroke="yellow"
+            strokeWidth="5"
+          />
+        );
+      }
+      const flipX = IS_ANDROID || cameraType === Camera.Constants.Type.back;
+      const transformedLineSegments = lineSegments.map((segment) => {
+        const outputTensorWidth = getOutputTensorWidth();
+        const outputTensorHeight = getOutputTensorHeight();
+        const previewWidth = isPortrait() ? CAM_PREVIEW_WIDTH : CAM_PREVIEW_HEIGHT;
+        const previewHeight = isPortrait() ? CAM_PREVIEW_HEIGHT : CAM_PREVIEW_WIDTH;
+
+        const transformedX1 = flipX
+          ? outputTensorWidth - (segment.props.x1 / outputTensorWidth) * previewWidth
+          : (segment.props.x1 / outputTensorWidth) * previewWidth;
+        const ttransformedX1 = transformedX1 + CAM_PREVIEW_WIDTH / 2;
+
+        const transformedX2 = flipX
+          ? outputTensorWidth - (segment.props.x2 / outputTensorWidth) * previewWidth
+          : (segment.props.x2 / outputTensorWidth) * previewWidth;
+
+        const ttransformedX2 = transformedX2 + CAM_PREVIEW_WIDTH / 2;
+
+        const transformedY1 = (segment.props.y1 / outputTensorHeight) * previewHeight;
+        const transformedY2 = (segment.props.y2 / outputTensorHeight) * previewHeight;
+
+        const transformedSegment = React.cloneElement(segment, {
+          x1: ttransformedX1 + 25,
+          x2: ttransformedX2 + 25,
+          y1: transformedY1,
+          y2: transformedY2,
+        });
+        return transformedSegment;
+      });
+
+      return (
+        <Svg style={styles.svg}>
+          {transformedLineSegments}
+          {keypointts}
+        </Svg>
+      );
     } else {
       return <View></View>;
     }
   };
 
+  const computeArmAngle = () => {
+    if (poses != null && poses.length > 0) {
+      const keypoints = poses[0].keypoints;
+      const rightShoulder = keypoints.find((k) => k.name === 'right_shoulder');
+      const rightElbow = keypoints.find((k) => k.name === 'right_elbow');
+      const rightWrist = keypoints.find((k) => k.name === 'right_wrist');
+
+      if (rightShoulder && rightElbow && rightWrist) {
+        const shoulderToElbow = Math.atan2(
+          rightElbow.y - rightShoulder.y,
+          rightElbow.x - rightShoulder.x
+        );
+        const elbowToWrist = Math.atan2(
+          rightWrist.y - rightElbow.y,
+          rightWrist.x - rightElbow.x
+        );
+        let armAngle = (elbowToWrist - shoulderToElbow) * (180 / Math.PI);
+        
+        // Convert negative angles to positive
+        if (armAngle < 0) {
+          armAngle += 360;
+        }
+        armAngle = 180 - armAngle;
+        // make arm angle positive with absolute value
+        armAngle = Math.abs(armAngle);
+
+        return <Text>Right Arm Angle: {armAngle.toFixed(2)} degrees</Text>;
+      }
+    }
+
+    return null;
+  };
+
+  const computeLegAngle = () => {
+    if (poses != null && poses.length > 0) {
+      const keypoints = poses[0].keypoints;
+      const rightHip = keypoints.find((k) => k.name === 'right_hip');
+      const rightKnee = keypoints.find((k) => k.name === 'right_knee');
+      const rightAnkle = keypoints.find((k) => k.name === 'right_ankle');
+
+      if (rightHip && rightKnee && rightAnkle) {
+        const hipToKnee = Math.atan2(
+          rightKnee.y - rightHip.y,
+          rightKnee.x - rightHip.x
+        );
+        const kneeToAnkle = Math.atan2(
+          rightAnkle.y - rightKnee.y,
+          rightAnkle.x - rightKnee.x
+        );
+        let legAngle = (kneeToAnkle - hipToKnee) * (180 / Math.PI);
+              
+              // Convert negative angles to positive
+              if (legAngle < 0) {
+                legAngle += 360;
+              }
+
+              legAngle = 180 - legAngle;
+              // make arm angle positive with absolute value
+              legAngle = Math.abs(legAngle);
+
+              return <Text>Right Leg Angle: {legAngle.toFixed(2)} degrees</Text>;
+            }
+    }
+
+    return null;
+  };
+
   const renderFps = () => {
     return (
       <View style={styles.fpsContainer}>
-        <Text>FPS: {fps}</Text>
+        {/* <Text>FPS: {fps}</Text> */}
+        {computeArmAngle()}
+        {computeLegAngle()}
       </View>
     );
   };
@@ -339,7 +575,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 10,
     left: 10,
-    width: 80,
+    width: 160,
     alignItems: 'center',
     backgroundColor: 'rgba(255, 255, 255, .7)',
     borderRadius: 2,

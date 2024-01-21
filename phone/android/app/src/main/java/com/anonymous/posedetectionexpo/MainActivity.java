@@ -1,4 +1,4 @@
-package com.posenet;
+package com.anonymous.posedetectionexpo;
 
 import android.os.Bundle;
 
