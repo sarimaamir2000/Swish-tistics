@@ -1,3 +1,4 @@
+import React from 'react';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Body from './Body';
@@ -19,11 +20,11 @@ const Initial = ({ activeTab, setActiveTab, userName, performanceData, statistic
 
     return(
         <div style={mainContentStyle}>
-        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <div style={contentStyle}>
-          <Header userName={userName}/>
-          <Body performanceData={performanceData} statistics={statistics} period={period} currentScore={currentScore} bestScore={bestScore} shotsMissed={shotsMissed}/>
-        </div>
+          <Sidebar activeTab={activeTab} setActiveTab={setActiveTab}/>
+          <div style={contentStyle}>
+            <Header userName={userName}/>
+            <Body performanceData={performanceData} statistics={statistics} period={period} currentScore={currentScore} bestScore={bestScore} shotsMissed={shotsMissed}/>
+          </div>
         </div>
       )
     }

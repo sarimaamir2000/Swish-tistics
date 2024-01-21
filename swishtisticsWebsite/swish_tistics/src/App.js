@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
-import Dashboard from './Dashboard.js';;
-import './App.css'; // Import global styles
+import Dashboard from './Dashboard.js';
+import './App.css';
 
 function App() {
   return (

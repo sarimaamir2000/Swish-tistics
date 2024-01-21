@@ -34,7 +34,17 @@ function Dashboard() {
   const renderActiveTab = () => {
     switch (activeTab) {
       case 'dashboard':
-        return <Initial activeTab setActiveTab={setActiveTab} userName performanceData={performanceData} statistics={statistics} period currentScore bestScore shotsMissed/>;
+        return <Initial 
+          activeTab={activeTab} 
+          setActiveTab={setActiveTab} 
+          userName={userName} 
+          performanceData={performanceData} 
+          statistics={statistics} 
+          period={period} 
+          currentScore={currentScore} 
+          bestScore={bestScore} 
+          shotsMissed={shotsMissed}
+          />;
       case 'calendar':
         return <Calendar />;
       case 'squad':
@@ -78,7 +88,6 @@ function Dashboard() {
   return (
     <div>
       <div>
-        <Sidebar />
         {renderActiveTab()}
       </div>  
     </div>
