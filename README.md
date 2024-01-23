@@ -28,9 +28,10 @@
 </p>
 
 <p align="center">
-   ## Project Overview
+  
+### Website's Purpose
 
-On the Swish-tistics website, players use an app that uses their phone's camera and Tensorflow to outline their knees and arms, helping them assess the correctness of their form. The parameters are then sent to the website in real-time, allowing players to see and improve.
+On the Swish-tistics website, players use an app on their phone that uses Tensorflow and their phone camera to outline their knees and arms, helping them assess the correctness of their form. The parameters are then sent to the website in real-time, allowing players to see and improve.
 
 ### Real-time Feedback
 
